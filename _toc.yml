@@ -4,9 +4,37 @@
 format: jb-book
 root: intro
 chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
-- file: mymarkdownfile
-- file: newfile
-- file: anotherone
+# - file: Preface
+# - file: Defining Data Science - 4 + 1 Overview
+- file: Design/Design
+  sections:
+  - file: Design/Design_SDS
+  - file: Design/Design_Labs
+  - file: Design/Design_External
+  - file: Design/Design_Case
+# - file: Value
+#   sections:
+#   - file: Value_SDS
+#   - file: Value_Labs
+#   - file: Value_External
+#   - file: Value_Case
+# - file: Systems
+#   sections:
+#   - file: Systems_SDS
+#   - file: Systems_Labs
+#   - file: Systems_External
+#   - file: Systems_Case
+# - file: Analytics
+#   sections:
+#   - file: Analytics_SDS
+#   - file: Analytics_Labs
+#   - file: Analytics_External
+#   - file: Analytics_Case
+# - file: Appendix
+#   sections:
+#   - file: Primary Sources
+#   - file: Summary Table
+#   - file: References
+#     sections: List of Sources
+# - file: BSDS Course Info
+# - file: Refernces #diff than sources?
