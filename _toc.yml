@@ -12,19 +12,19 @@ chapters:
   - file: Design/Design_Labs
   - file: Design/Design_External
   - file: Design/Design_Case
-- file: Value
+- file: Value/Value
   sections:
   - file: Value/Value_SDS
   - file: Value/Value_Labs
   - file: Value/Value_External
   - file: Value/Value_Case
-- file: Systems
+- file: Systems/Systems
   sections:
   - file: Systems/Systems_SDS
   - file: Systems/Systems_Labs
   - file: Systems/Systems_External
   - file: Systems/Systems_Case
-- file: Analytics
+- file: Analytics/Analytics
   sections:
   - file: Analytics/Analytics_SDS
   - file: Analytics/Analytics_Labs
