@@ -14,22 +14,22 @@ chapters:
   - file: Design/Design_Case
 - file: Value
   sections:
-  - file: Value_SDS
-  - file: Value_Labs
-  - file: Value_External
-  - file: Value_Case
+  - file: Value/Value_SDS
+  - file: Value/Value_Labs
+  - file: Value/Value_External
+  - file: Value/Value_Case
 - file: Systems
   sections:
-  - file: Systems_SDS
-  - file: Systems_Labs
-  - file: Systems_External
-  - file: Systems_Case
+  - file: Systems/Systems_SDS
+  - file: Systems/Systems_Labs
+  - file: Systems/Systems_External
+  - file: Systems/Systems_Case
 - file: Analytics
   sections:
-  - file: Analytics_SDS
-  - file: Analytics_Labs
-  - file: Analytics_External
-  - file: Analytics_Case
+  - file: Analytics/Analytics_SDS
+  - file: Analytics/Analytics_Labs
+  - file: Analytics/Analytics_External
+  - file: Analytics/Analytics_Case
 # - file: Appendix
 #   sections:
 #   - file: Primary Sources
