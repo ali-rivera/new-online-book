@@ -5,7 +5,7 @@ format: jb-book
 root: intro
 chapters:
 # - file: Preface
-# - file: Defining Data Science - 4 + 1 Overview
+- file: Defining-DS-4+1
 - file: Design/Design
   sections:
   - file: Design/Design_SDS
