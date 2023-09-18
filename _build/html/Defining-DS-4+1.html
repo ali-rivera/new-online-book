@@ -1,0 +1,528 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>&lt;no title&gt; &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Defining-DS-4+1';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Design" href="Design/Design.html" />
+    <link rel="prev" title="Welcome to your Jupyter Book" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="Design/Design.html">Design</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Design/Design_SDS.html">Design SDS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Design/Design_Labs.html">Design Labs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Design/Design_External.html">Design External to the School</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Design/Design_Case.html">Design Case Study</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Value/Value.html">Value</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Value/Value_SDS.html">Value SDS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Value/Value_Labs.html">Value Labs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Value/Value_External.html">Value External to the School</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Value/Value_Case.html">Value Case Study</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Systems/Systems.html">Systems</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Systems/Systems_SDS.html">Systems SDS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Systems/Systems_Labs.html">Systems Labs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Systems/Systems_External.html">Systems External to the School</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Systems/Systems_Case.html">Systems Case Study</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Analytics/Analytics.html">Analytics</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Analytics/Analytics_SDS.html">Analytics SDS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Analytics/Analytics_Labs.html">Analytics Labs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Analytics/Analytics_External.html">Analytics External to the School</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Analytics/Analytics_Case.html">Analytics Case Study</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FDefining-DS-4+1.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Defining-DS-4+1.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <p>{
+“hash”: “00f09326d50526528d8e2c53487689bd”,
+“result”: {
+“markdown”: “# Defining Data Science - 4 + 1 Overview \n# The 4 + 1 Model of Data Science\n\nR.C. Alvarado, UVA School of Data Science\n\nData Science is a complex and evolving field, but most agree that it can be defined as the intersection of computer science and technology, math and statistics, and domain knowledge, with the purpose of extracting knowledge and value from data. Many also associate it with a series of practical activities ranging from the cleaning and “wrangling” of data, to its analysis and use to infer models, to the visual and rhetorical representation of results to stakeholders and decision-makers.\n\nThis essay proposes a model of data science that is intended to go beyond the laundry-list defintions that dominate the discourse in the field today. Although these are not inaccurate, they do not get at the specific nature of data science or help distinguish it from adjacent fields such as computer science and statistics — fields whose members sometimes claim to already be doing data science. Without a clear understanding of data science the field is subject to counterproductive turf battles in the academy as well as confusion in the workplace. \n\n\n\n<code class="docutils literal notranslate"><span class="pre">{sidebar}\nIt</span> <span class="pre">is</span> <span class="pre">increasingly</span> <span class="pre">the</span> <span class="pre">case</span> <span class="pre">that</span> <span class="pre">hiring</span> <span class="pre">managers</span> <span class="pre">in</span> <span class="pre">industry</span> <span class="pre">understand</span> <span class="pre">the</span> <span class="pre">role</span> <span class="pre">of</span> <span class="pre">data</span> <span class="pre">scientist</span> <span class="pre">differently</span> <span class="pre">than</span> <span class="pre">the</span> <span class="pre">academic</span> <span class="pre">programs</span> <span class="pre">that</span> <span class="pre">produce</span> <span class="pre">data</span> <span class="pre">scientists.</span> <span class="pre">One</span> <span class="pre">result</span> <span class="pre">of</span> <span class="pre">this</span> <span class="pre">is</span> <span class="pre">the</span> <span class="pre">proliferation</span> <span class="pre">of</span> <span class="pre">terms</span> <span class="pre">such</span> <span class="pre">as</span> <span class="pre">data</span> <span class="pre">engineer,</span> <span class="pre">machine</span> <span class="pre">learning</span> <span class="pre">engineer,</span> <span class="pre">and</span> <span class="pre">applied</span> <span class="pre">AI</span> <span class="pre">to</span> <span class="pre">define</span> <span class="pre">areas</span> <span class="pre">of</span> <span class="pre">work</span> <span class="pre">that</span> <span class="pre">have</span> <span class="pre">historically</span> <span class="pre">belonged</span> <span class="pre">to</span> <span class="pre">data</span> <span class="pre">science.</span> <span class="pre">Another</span> <span class="pre">result</span> <span class="pre">is</span> <span class="pre">the</span> <span class="pre">confusion</span> <span class="pre">of</span> <span class="pre">data</span> <span class="pre">scientist</span> <span class="pre">with</span> <span class="pre">the</span> <span class="pre">roles</span> <span class="pre">of</span> <span class="pre">data</span> <span class="pre">analyst</span> <span class="pre">and</span> <span class="pre">statistician.</span> <span class="pre">\n</span></code>\n\n\n<!-- Transition? -->\n\nWe define data science in terms of a multi-part model thats represents core areas of expertise in the field and how they are related to each other. These are the areas of <strong>value</strong>, <strong>design</strong>, <strong>systems</strong>, and <strong>analytics</strong>. A fifth area, <strong>practice</strong>, integrates the other four in specific contexts. Together, these areas belong to every data science project, even if they are often unconnected and siloed in the academy. \n\nUnlike traditional academic disciplines, each area of the proposed model is inherently interdisciplinary, bringing together diverse and sometimes contrary perspectives under a common heading. The inherently interdisciplinary and pluralist nature of these areas is a distinctive feature of data science and a key differentiator between it and traditional disciplines.\n\nThe following describes how this model is derived and provides clues about how to interpret and apply the model to your own situation.\n\n## A Common Theme: The Image of the Pipeline\n\nA review of the literature of data science definitions, from sources attempting to define the field explicitiy, as well as from self-definitions from adjacent fields such as data analysis and data mining, reveals that most definitions invoke the image of a data pipeline — a sequence of actions through which data flows as it moves from the consumption of raw data to production of results. Consumed data may come from a variety of sources — databases or intentional experiments or sensors. Results may be equally various, from the communication of analytical results to stake-holders to the development of a data product for use on the web. For a detailed review of these sources, see the <span class="xref myst">Appendix</span>.\n\n\n\n<code class="docutils literal notranslate"><span class="pre">{sidebar}\nThe</span> <span class="pre">idea</span> <span class="pre">that</span> <span class="pre">this</span> <span class="pre">pipeline</span> <span class="pre">is</span> <span class="pre">fundamental</span> <span class="pre">to</span> <span class="pre">data</span> <span class="pre">science</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">new</span> <span class="pre">&amp;mdash;</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">1990s,</span> <span class="pre">data</span> <span class="pre">mining</span> <span class="pre">was</span> <span class="pre">conceptualized</span> <span class="pre">as</span> <span class="pre">a</span> <span class="pre">pipeline</span> <span class="pre">with</span> <span class="pre">the</span> <span class="pre">SEMMA</span> <span class="pre">and</span> <span class="pre">CRISP-DM</span> <span class="pre">models</span> <span class="pre">that</span> <span class="pre">are</span> <span class="pre">widely</span> <span class="pre">adopted</span> <span class="pre">by</span> <span class="pre">data</span> <span class="pre">scientists</span> <span class="pre">today</span> <span class="pre">in</span> <span class="pre">one</span> <span class="pre">form</span> <span class="pre">or</span> <span class="pre">another,</span> <span class="pre">such</span> <span class="pre">as</span> <span class="pre">Mason</span> <span class="pre">and</span> <span class="pre">Wiggins'</span> <span class="pre">OSEMI</span> <span class="pre">model</span> <span class="pre">(Azevedo</span> <span class="pre">and</span> <span class="pre">Santos</span> <span class="pre">2008;</span> <span class="pre">Mason</span> <span class="pre">and</span> <span class="pre">Wiggins</span> <span class="pre">2010).</span> <span class="pre">In</span> <span class="pre">fact,</span> <span class="pre">the</span> <span class="pre">image</span> <span class="pre">goes</span> <span class="pre">back</span> <span class="pre">at</span> <span class="pre">least</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">early</span> <span class="pre">1960s,</span> <span class="pre">when</span> <span class="pre">the</span> <span class="pre">Data</span> <span class="pre">Sciences</span> <span class="pre">Laboratory</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">U.S.</span> <span class="pre">Air</span> <span class="pre">Force</span> <span class="pre">was</span> <span class="pre">created</span> <span class="pre">to</span> <span class="pre">address</span> <span class="pre">the</span> <span class="pre">fact</span> <span class="pre">that</span> <span class="pre">\&quot;\\[m\\]odern</span> <span class="pre">data</span> <span class="pre">processing</span> <span class="pre">and</span> <span class="pre">computing</span> <span class="pre">machinery,</span> <span class="pre">together</span> <span class="pre">with</span> <span class="pre">improved</span> <span class="pre">communications,</span> <span class="pre">has</span> <span class="pre">made</span> <span class="pre">it</span> <span class="pre">possible</span> <span class="pre">to</span> <span class="pre">*ask</span> <span class="pre">for*,</span> <span class="pre">*collect,</span> <span class="pre">process</span> <span class="pre">and</span> <span class="pre">use*</span> <span class="pre">astronomical</span> <span class="pre">amounts</span> <span class="pre">of</span> <span class="pre">detailed</span> <span class="pre">data\&quot;</span> <span class="pre">(AFCRL</span> <span class="pre">1963:</span> <span class="pre">187;</span> <span class="pre">emphasis</span> <span class="pre">added).</span> <span class="pre">More</span> <span class="pre">recently,</span> <span class="pre">Donoho's</span> <span class="pre">\&quot;50</span> <span class="pre">Years</span> <span class="pre">of</span> <span class="pre">Data</span> <span class="pre">Science\&quot;</span> <span class="pre">proposes</span> <span class="pre">a</span> <span class="pre">framework</span> <span class="pre">for</span> <span class="pre">the</span> <span class="pre">field</span> <span class="pre">based</span> <span class="pre">on</span> <span class="pre">a</span> <span class="pre">sequence</span> <span class="pre">of</span> <span class="pre">six</span> <span class="pre">divisions</span> <span class="pre">that</span> <span class="pre">follow</span> <span class="pre">the</span> <span class="pre">structure</span> <span class="pre">of</span> <span class="pre">a</span> <span class="pre">pipeline</span> <span class="pre">(Donoho</span> <span class="pre">2017).\n</span></code>\n\n\n\n&lt;!–\nInsert here the approach of looking the pipelines as a trope, a kind of narrative, and therefore subject to literary analysis. \n\nViewed in this way, these pipeline narratives have an obvious chiasmatic structure. \n\nThey also have a three-part structure that is common to most stories – a beginning, middle, and end. This structure is more useful than it looks: \n–&gt;\n\n### A Common Sequence\n\n<!--\nInclude referene to appendix\n-->\n\nAn analysis of a representative sample of definitional essays shows that the various pipeline stories consist of elements drawn from a standard sequence of about twelve elements, give or take a few, depending on how one might expand or contract terms. These may signified by a core set of verbs or event types (which narratologists call functions), with the understanding that many synonyms are employed in the examples: \n\n1. Understand\n2. Plan\n3. Collect\n4. Store\n5. Clean \n6. Explore\n7. Prepare \n8. Model\n9. Interpret\n10. Communicate\n11. Deploy \n12. Reflect \n\nNo one definition includes them all, but some are more comprehensive than others, and different disciplines emphasize different parts. \n\nFor example, Hayashi’s statistically-oriented definition of data science includes just three phases — design <span class="math notranslate nohighlight">\([1]\)</span>, collect <span class="math notranslate nohighlight">\([3]\)</span>, and analyze <span class="math notranslate nohighlight">\([8, 9]\)</span> — with an emphasis on the experimental design phase in which data are actually produced through thoughtfully designed experiments (Hayashi 1998). \n\nMason and Wiggins propose five — obtain <span class="math notranslate nohighlight">\([3, 4]\)</span>, scrub <span class="math notranslate nohighlight">\([5]\)</span>, explore <span class="math notranslate nohighlight">\([6]\)</span>, model <span class="math notranslate nohighlight">\([8]\)</span>, and interpret <span class="math notranslate nohighlight">\([9]\)</span> — which highlights two conditions that define industrial data science, the simultaneous availability of data (one merely obtains it, say through web scraping) and their poor condition relative to analysis, i.e. the need to scrub and wrangle them into usable form (Mason and Wiggins 2010). \n\nThe CRISP-DM model is the most comprehensive, with seven phases defined (if we include the unnamed but visually depicted function of storage), emphasizing the importance of understanding both the business proposition and data before anything is done with it (Wirth and Hipp 1999). It also modifies the metaphor of the pipeline, representing it as a circular and iterative process. However, unlike Donoho’s similarly comprehensive sequence (implied by the ordering of his six divisions of “greater data science”), it does not include a “meta” phase devoted to reflecting on the process as a whole (Donoho 2017).\n\nThis twelve-part composite pipeline can be simplified by combining functions that naturally go together, by virtue of the expertise required to carry them out. This reduction yields about seven phases: \n\n    <span class="math notranslate nohighlight">\(A\)</span> understand and plan\n    <span class="math notranslate nohighlight">\(B\)</span> collect and store\n    <span class="math notranslate nohighlight">\(C\)</span> clean, prepare, and explore\n    <span class="math notranslate nohighlight">\(D\)</span> model and interpret\n    <span class="math notranslate nohighlight">\(E\)</span> communicate\n    <span class="math notranslate nohighlight">\(F\)</span> deploy\n    <span class="math notranslate nohighlight">\(G\)</span> reflect \n\nEach of these may be considered a “chapter” in the story. Note that the number of verbs in each chapter title does not necessarily predict the length of its content. For example, the chapter on “model and interpret” covers a wide range of activities from a variety of perspectives, including classical statistics, machine learning, and computational simulation. It’s a big and complicated chapter, but it is just one chapter among seven, even though many may consider it to be the most important chapter.\n\n### An Arc with Four Zones\n\n<code class="docutils literal notranslate"><span class="pre">{figure}</span> <span class="pre">media/image1.png\nThe</span> <span class="pre">Standard</span> <span class="pre">Sequence</span> <span class="pre">as</span> <span class="pre">a</span> <span class="pre">Narrative</span> <span class="pre">Arc\n</span></code>\n\nTo be sure, the middle chapter plays a central role in our story. If we think of the story as following a classical “there and back again” structure — a chiasmus pattern like <span class="math notranslate nohighlight">\(X_1, Y_1, Z, Y_2, X_2\)</span>  —  then chapter <span class="math notranslate nohighlight">\(D\)</span> is the pivot, while chapters <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(B\)</span>, and <span class="math notranslate nohighlight">\(C\)</span> mirror <span class="math notranslate nohighlight">\(E\)</span>, <span class="math notranslate nohighlight">\(F\)</span>, and <span class="math notranslate nohighlight">\(G\)</span>. Thinking of the story in this way allows us to identify a parallel structure in the pipeline, connecting phases that are usually seen as separate. Specifically, we may visualize the pipeline as an arc, in which chapters in the first half of the pipeline mirror the those of the second half. We may then group chapters by the pairs formed in this way, yielding four zones — <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(G\)</span> belong to zone <span class="math notranslate nohighlight">\(I\)</span>, <span class="math notranslate nohighlight">\(B\)</span> and <span class="math notranslate nohighlight">\(F\)</span> to <span class="math notranslate nohighlight">\(II\)</span>, <span class="math notranslate nohighlight">\(C\)</span> and <span class="math notranslate nohighlight">\(E\)</span> to <span class="math notranslate nohighlight">\(III\)</span>, and <span class="math notranslate nohighlight">\(D\)</span> to <span class="math notranslate nohighlight">\(IV\)</span> — as in the following diagram:\n\n<code class="docutils literal notranslate"><span class="pre">{figure}</span> <span class="pre">media/image2.png\nThe</span> <span class="pre">Arc</span> <span class="pre">Transposed\n</span></code>\nWith this visualization, we can discern some interesting properties about the data science pipeline that are not obvious in the original sequential image. For one, the arc structure suggests that the two ends of the pipe are not separate; both make direct contact with the external world. The external world — natural or social — from which data are pulled is the same world into which data products are inserted. This insight echoes the CRISP-DM model, which connects <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(G\)</span> (actually <span class="math notranslate nohighlight">\(F\)</span>), except that the two ends of the arc model are not directly connected. Instead, they come into contact with — and are separated by — the world in all of its complexity and unpredictability. The relationship between the effects caused by our data products G and the data we pull from the world <span class="math notranslate nohighlight">\(A\)</span> is not given but a matter of discovery — and often surprise.\n\nAt this point, we can explore the unifying themes associated with the four zones in our arc model by transposing the preceding visualization, which draws attention to what is common to each pairing. This generates four candidate areas of data science expertise — activities that, although they appear on opposite ends of the pipeline, nevertheless share basic knowledge, know-how, and areas of concern. \n\nZone <span class="math notranslate nohighlight">\(IV\)</span> is the easiest to interpret in this way because as the pivot of the arc it is not paired. It represents the work of modeling a problem mathematically, as well as evaluating and interpreting the results of mathematical modeling. This work requires data to be available in a particular form — clean and organized, usually as “tidy” analytical tables. \n\nZone <span class="math notranslate nohighlight">\(I\)</span> is also relatively easy to interpret: the functions in this group each involve understanding the relationship between the pipeline and the external world, the messy interface between the enterprise of data science and the variety of real world situations in which it operates. \n\nWe may note in passing that <span class="math notranslate nohighlight">\(I\)</span> and <span class="math notranslate nohighlight">\(IV\)</span> can be contrasted in several ways — messy vs clean, exoteric vs esoteric, qualitative vs quantitative, existential vs essential, concrete vs abstract, etc.\n\nWhen it comes to zones <span class="math notranslate nohighlight">\(II\)</span> and <span class="math notranslate nohighlight">\(III\)</span>, the interpretation of results is less straightforward. This is because the reality of the kind of work performed in these areas is not as clear-cut as it is for <span class="math notranslate nohighlight">\(I\)</span> and <span class="math notranslate nohighlight">\(IV\)</span>. Both <span class="math notranslate nohighlight">\(II\)</span> and <span class="math notranslate nohighlight">\(III\)</span> exhibit an internal complexity not found in the others, and the two are less clearly separable from each other than they are from the other two. One reason for this complexity is that here pure and applied forms of knowledge intermingle in ways that defy easy description from an academic perspective. \n\nFor example, the work of “data wrangling,” considered distinctive to data science, spans the two domains and involves a complex mixture of specific technological know-how and general scientific principles. It turns out that the relationship between these kinds of knowledge is highly contested, as evidenced by the reception of Donoho’s “50 Years of Data Science,” which has been criticized for separating science from engineering and demoting the importance of the latter (Donoho 2017). Regardless of the validity of this criticism, there is without doubt a long-standing conflict between data mining and data analysis over what counts as valid forms of knowledge, and this conflict emerges in the representation of zones <span class="math notranslate nohighlight">\(II\)</span> and <span class="math notranslate nohighlight">\(III\)</span> we find in our corpus.\n\nWe can take the conflict of interpretations over the status of technical knowledge in data science as a clue and use it to identify two broad dimensions that cross-cut the functions in zones <span class="math notranslate nohighlight">\(II\)</span> and <span class="math notranslate nohighlight">\(III\)</span>: technical know-how and abstract representation. Technical know-how <span class="math notranslate nohighlight">\(II´\)</span> involves expertise in developing and deploying software and hardware designed to handle data at scale, including high-performance computing, big data architectures (such as Hadoop and its descendants), and data-oriented programming languages and libraries. \n\nThe topics associated with <span class="math notranslate nohighlight">\(II'\)</span> are highly specific and change rapidly relative to other forms of knowledge, and so are often omitted from, or under-represented in, academic curricula, even though to many they are the <em>sine qua non</em> of data science. Abstract representation <span class="math notranslate nohighlight">\(III´\)</span>, on the other hand, involves expertise in areas ranging from how data are to be modeled for capture and analysis to how the results of analyses are to be presented to non-expert decision-makers. These areas of knowledge strive for formal generality over the long run; they are often expressed as grammars or design languages, frequently with visual modes (such as entity-relationship models and unified modeling language UML). They also include other forms of visualization, such as the plots developed for exploratory data analysis, such as box plots, and those used to represent statistical facts and analytical results in dashboards and infographics.\n\n### The Four Areas, Plus One\n\nWe are now ready to define and name the areas of data science expertise that emerge from an analysis of the pipeline considered as an arc. In each case, we want to identify the common context shared by the paired activities in each zone as well as the tension that exists between them by virtue of their occupying opposite sides of the pipeline. In many cases, although we can identify a shared theme in each zone’s work, the reality is that practitioners do not always interact or share disciplinary homes. One of the benefits of this model will be to identify these points of synergy and to identify new disciplinary boundaries.\n\n<strong>Area I: Value</strong>\n\nThe area of value is defined by the relationship of data science to the world from which it draws data and into which it inserts data products. More broadly, it concerns the primary motivations of data science — why do we practice data science in the first place? It combines the traditional discipline of ethics with the professional activities of business planning, policy making, developing motivations for scientific research, and other activities that have a direct impact on people and the planet. This is the area where we determine what we do versus what we do not do, in order to maximize societal and environmental benefit and minimize harm. It is also the area that looks inward to the other data science areas and provides guidance on such issues as algorithmic bias or open science. Common activities include the forming of value propositions that initiate data science projects, research into how data is created and used “in the wild,” understanding the ethics of data acquisition, manipulation, communication, and sharing, and the application of data products in the world.\n\n<strong>Area II´: Design</strong>\n\nThe area of design is defined by the relationship between human and machine forms of representation. This relationship is bidirectional: human-generated data flowing into the pipeline must be represented for machine consumption (H2M, or <span class="math notranslate nohighlight">\(H \\rightarrow M\)</span>), while analytically transformed data going out must be represented for human consumption (M2H, or <span class="math notranslate nohighlight">\(M \\rightarrow H\)</span>). This area therefore includes expertise in human-machine interaction as it appears at the points of both consuming data and producing data products. Activities here include the representation and communication of captured data for the work of analytics, e.g. in database modeling, the curation of data, and of complex data and analytical results to humans to drive decision-making and influence behavior. It also includes the making of things, with purpose (i.e. to solve problems) and intent (meaning, concision, focus). A key part of the area is the broad practice of what is often called visualization, the translation of complex quantitative information into visual (and other sensory) forms that non-experts can understand. In slightly more technical terms, the area of design focuses on what Zuboff called “informating,” the process by which the world is represented for computation and analytics, and also by which analytical models and results are represented to the world (Zuboff 1995). These two processes often produce competing representations — a private one <em>of</em> the world for the data scientist, and a public one <em>for</em> the world of the results of analytics. One task of this area is to reconcile these two representations.\n\n<strong>Area III´: Systems</strong>\n\nThe area of systems is defined by the technological infrastructure that is common to the pipeline but concentrated in the activities of wrangling data, deploying data products, and building out systems to support these activities at scale. This area includes expertise in infrastructure systems and architectures to support working with big data — big in terms of volume, velocity, and variety — and building high performance systems in both development and production environments. It includes the broad areas of hardware and software as such — computer technology as opposed to computer science. Key activities include developing cloud resources, building performant pipelines to ingest and aggregate data, developing networks of resilient distributed data, and writing and using software to accomplish tasks. This area is often referred to as “data engineering” or “machine learning engineering,” which, according to Owen, “is most of what Data Science is and Statistics is not” (Owen 2015).\n\n<strong>Area IV: Analytics</strong>\n\nThe area of analytics is defined by the practice of mathematical modeling based on data. This area includes what many consider to be the essence of data science, the combination of statistical methods with machine learning, along with information theory, optimization, network analysis, complexity theory, simulations, and other rigorous quantitative methods from a variety of fields. Although unified by a broad commitment to advanced mathematical models and computational algorithms, in reality this is a heterogeneous collection of competing schools and methods. Tensions include inference vs prediction, parametric vs non-parametric (kernel-based) methods, frequentist vs Bayesian statistics, analytic vs algorithmic solutions (including simulations), etc. Key activities include clustering, pattern recognition, regression, rule mining, feature engineering, model selection, performance evaluation, and a host of other activities. Although currently dominated by statistical methods, this area also includes the rule-based methods that dominated the field of artificial intelligence before the more recent successes of statistical learning and deep learning.\n\n<strong>Area V: Practice</strong>\n\nThe preceding four areas each represent areas of foundational knowledge, forms of expertise that can be taught as more or less separate subjects. In practice, however, these areas represent the interlocking parts of a division of labor that are integrated in the pipeline. This area consists of actual activities that brings people together to combine expertise from each of the four areas. It is characterized by data science teams working together and with external parties to develop solutions and projects that are responsible, authentic, efficient, and effective. Practice is also where the core areas of data science come into contact with a broad spectrum of domain knowledge and real world problems. The following diagram () shows the central, integrative role played by practice:\n\n<code class="docutils literal notranslate"><span class="pre">{figure}</span> <span class="pre">media/image3.png\nThe</span> <span class="pre">Integrative</span> <span class="pre">Role</span> <span class="pre">of</span> <span class="pre">Practice\n</span></code>\n### Two Principal Components\n\nIs there a way to understand how the four primary areas are related to each other, beyond their being composed of functions from the same pipeline? Put another way, does the pipeline-as-arc model exhibit any structural features that will help us conceptualize the broader space of data science? Two such features stand out: (1) the opposition between concrete and abstract forms of representation, and (2) between human and machine processing.\n\nRegarding the concrete and the abstract, it’s clear that the arc model has a metric quality to it: as one moves toward the pivot point of analysis, one moves away from the concrete messiness of reality as experienced to the “tidy” and abstract world of mathematics; similarly, as one moves from the pivot back to the world, there is a requirement to convert esoteric results into more humanly intelligible forms, often through a process of concretization; visualizations succeed by employing concrete metaphors that flesh out mathematical ideas that are notoriously detached from the imagination — no one can imagine, for example, n-dimensional spaces beyond a handful of dimensions. The arc describes a dialectic of abstraction and concretization that defines the ebb and flow and data science work.\n\n<code class="docutils literal notranslate"><span class="pre">{figure}</span> <span class="pre">media/image4.png\nThe</span> <span class="pre">Four</span> <span class="pre">Areas</span> <span class="pre">in</span> <span class="pre">Two</span> <span class="pre">Dimensions\n</span></code>\n\nThe dimension of human and machine processing exhibits a similar duality, that between the conversion of information from humanly accessible forms, such as given by data acquired by instruments, into machine readable and processible forms, and the reverse. The process of moving from human to machine representations is a large part of what data capture, modeling, and wrangling is all about, while the process of converting the results of machine learning, broadly conceived, into humanly actionable form is what visualization and productization are all about. The reality of this dualism is captured by the concept of human-computer interaction (HCI), an established field that is applicable to both sides of the arc.\n\nHow do the four fundamental areas map onto these two dimensions? We can define each area as a combination of one pole from each duality; the four areas result from all possible permutations of the two dimensions. This produces the following high level characterizations of each area: (1) Value is concerned with concrete humanity, (2) Design with abstract humanity, (3) Analytics with abstract machinery, and (4) Systems is concerned with concrete machinery. All of these make intuitive sense, with the exception of Design. This is consistent, however, with the fact that the area of Design emerges from this analysis as an undervalued and not well understood area of expertise, even though Yau emphasized it early on (Yau 2009b). Indeed, one of the consequences of this analysis is to train our attention on this area of knowledge and to develop it further.\n\n\n\n<code class="docutils literal notranslate"><span class="pre">{sidebar}\nIt</span> <span class="pre">is</span> <span class="pre">worth</span> <span class="pre">noting</span> <span class="pre">that</span> <span class="pre">the</span> <span class="pre">four</span> <span class="pre">combinations</span> <span class="pre">are</span> <span class="pre">surprisingly</span> <span class="pre">analogous</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">four</span> <span class="pre">approaches</span> <span class="pre">to</span> <span class="pre">artificial</span> <span class="pre">intelligence</span> <span class="pre">defined</span> <span class="pre">by</span> <span class="pre">Russel</span> <span class="pre">and</span> <span class="pre">Norvig,</span> <span class="pre">which</span> <span class="pre">is</span> <span class="pre">based</span> <span class="pre">on</span> <span class="pre">the</span> <span class="pre">space</span> <span class="pre">opened</span> <span class="pre">by</span> <span class="pre">combining</span> <span class="pre">the</span> <span class="pre">axes</span> <span class="pre">thinking/acting</span> <span class="pre">with</span> <span class="pre">human/rational</span> <span class="pre">(Russell</span> <span class="pre">and</span> <span class="pre">Norvig</span> <span class="pre">1995:</span> <span class="pre">5):</span> <span class="pre">\n\n(1)</span> <span class="pre">thinking</span> <span class="pre">humanly</span> <span class="pre">\\\n(2)</span> <span class="pre">thinking</span> <span class="pre">rationally</span> <span class="pre">\\\n(3)</span> <span class="pre">acting</span> <span class="pre">humanly</span> <span class="pre">\\\n(4)</span> <span class="pre">acting</span> <span class="pre">rationally\n\nMoreover,</span> <span class="pre">it</span> <span class="pre">is</span> <span class="pre">easy</span> <span class="pre">to</span> <span class="pre">see</span> <span class="pre">how</span> <span class="pre">the</span> <span class="pre">following</span> <span class="pre">analogies</span> <span class="pre">make</span> <span class="pre">sense:</span> <span class="pre">\n\n$$\nabstract</span> <span class="pre">:</span> <span class="pre">concrete</span> <span class="pre">::</span> <span class="pre">thinking</span> <span class="pre">:</span> <span class="pre">action\n$$\n\nand\n\n$$\nhuman</span> <span class="pre">:</span> <span class="pre">rational</span> <span class="pre">::</span> <span class="pre">human</span> <span class="pre">:</span> <span class="pre">machine\n$$\n\n\nIn</span> <span class="pre">fact,</span> <span class="pre">it</span> <span class="pre">appears</span> <span class="pre">that</span> <span class="pre">the</span> <span class="pre">same</span> <span class="pre">space</span> <span class="pre">is</span> <span class="pre">shared</span> <span class="pre">by</span> <span class="pre">the</span> <span class="pre">4+1</span> <span class="pre">model</span> <span class="pre">of</span> <span class="pre">data</span> <span class="pre">science</span> <span class="pre">and</span> <span class="pre">Russell</span> <span class="pre">and</span> <span class="pre">Norvig's</span> <span class="pre">model</span> <span class="pre">of</span> <span class="pre">artificial</span> <span class="pre">intelligence.</span> <span class="pre">The</span> <span class="pre">difference</span> <span class="pre">that</span> <span class="pre">the</span> <span class="pre">former</span> <span class="pre">is</span> <span class="pre">focused</span> <span class="pre">on</span> <span class="pre">forms</span> <span class="pre">of</span> <span class="pre">labor</span> <span class="pre">carried</span> <span class="pre">out</span> <span class="pre">by</span> <span class="pre">the</span> <span class="pre">data</span> <span class="pre">scientist,</span> <span class="pre">whereas</span> <span class="pre">the</span> <span class="pre">latter</span> <span class="pre">concerns</span> <span class="pre">forms</span> <span class="pre">of</span> <span class="pre">intelligence</span> <span class="pre">built</span> <span class="pre">by</span> <span class="pre">AI</span> <span class="pre">specialists.\n</span></code>\n\n\n\nOne exciting interpretation of the two dimensions defined here is that they correspond to two principal components that undergird the general field of data science. As components, these axes define two orthogonal dimensions within which all the specific topics of data science may, in principle, be plotted. The reality behind these axes may be that they represent cognitive styles associated with the division of labor implied by the data science pipeline.\n\n<strong>PC1: Human versus Machine</strong>\n\nThe human-machine axis accounts for the most variance in the field. This seems evident from the fact that Conway’s Venn diagram model of data science represents only the machine side of our model (with practice replaced by “substantive expertise”). The human side — Value and Design — is left out, or short-changed by being lumped in with domain knowledge. The very fact that the human side has to be explained and added to the model suggests strongly that it defines a pole at some distance from the areas of knowledge described in Conway’s model. The human pole refers to humanity understood as situated in their historical, social, and cultural milieu. It is synonymous with <em>human experience</em>. The machine pole refers to the technoscientific apparatus of formal, quantitative reasoning that operates on representations of the human and the world. In the context of data science, it is more or less synonymous with <em>machine intelligence</em>, broadly conceived to include machine learning but also other modes of analysis on the spectrum of prediction and inference. Given these poles, the human-machine axis represents the opposition between humanistic disciplines that seek to understand human experience as such, and the formal sciences that employ machine intelligence, broadly conceived, to interpret that experience as represented and aggregated in the form of data.\n\n<strong>PC2: Concrete versus Abstract</strong>\n\nThe abstract-concrete axis accounts for the difference between two forms of knowledge, roughly between direct experience and the indirect representation of that experience enabled through data. Both the realm of Value and Systems involve immersion in the messy details of lived experience — and direct acquaintance with the devils in those details. This is the messy world of hacks and ironies. The realms of Design and Analysis, on the other hand, are founded on abstract representations that strive for clear and distinct purity, and which allow for deductive reasoning to succeed at the cost of simplifying assumptions and reduced representations. This is the orderly world of models. The concrete pole refers to situated knowledge, knowledge as understood by hackers and makers, but also ethnographers who seek to maximize thick description in their work. It represents <em>concrete materiality</em>. The abstract pole refers to formal knowledge, knowledge in the form of mathematical symbolism, deductive proofs, and algorithmic patterns. It is <em>abstract form</em>. Given these poles, the concrete-abstract axis is roughly the opposition between applied and pure forms of knowledge, between those that embrace materiality and those that seek purity of form.\n\n## Final Representation\n\nThe result of the preceding may be represented by the following graphic.\n\n<code class="docutils literal notranslate"><span class="pre">{figure}</span> <span class="pre">media/image5.png\nThe</span> <span class="pre">4+1</span> <span class="pre">Model</span> <span class="pre">of</span> <span class="pre">Data</span> <span class="pre">Science\n</span></code>\n\nThis visualization represents data science as composed of specific and complementary forms of knowledge. The vertical axis defines the dominant polarity between analysis — the <em>how</em> of data science, often identified entirely with it, contrasted with the <em>why</em> of data science, from which data science derives its meaning and value as a profession. The horizontal access defines the polarity of methods that are often obscured in academic definitions of data science — the supporting practices that make the Analytics component work in the first place.\n\n## Concluding Remarks\n\nThe point of the 4 + 1 model, abstract as it is, is to provide a practical template for strategically planning the various elements of a school of data science. To serve as an effective template, a model must be general. But generality if often purchased at the cost of intuitive understanding. The following caveats may help make sense of the model when considering its usefulness when applied to various concrete activities.\n\n<strong>The model describes areas of academic expertise, not objective reality</strong>. It is a map of a division of labor writ large. Although each of the areas has clear connections to the others, the question to ask when deciding where an activity belongs is: <em>who would be an expert at doing it</em>? The realms help refine this question: the analytics area, for example, contains people who are good at working with abstract machinery. The four areas have the virtue of isolating intuitively correct communities of expertise. For example, people who are great at data product design may not know the esoteric depths of machine learning, and that adepts at machine learning are not usually experts in understanding human society and normative culture.\n\n<strong>Each area in the model contains a collection of subfields that need to be teased out</strong>. Some areas will have more subfields than others. Although some areas may be smaller than others in terms of number of experts (faculty) and courses, each area has a major impact on the overall practice of data science and the quality of an academic program’s activities. In addition, these subfields are in an important sense “more real” than the categories. We can imagine them forming a dense network in which the areas define communities with centroids, and which are more interconnected than the clean-cut image of the model implies.\n\n<strong>The principal components abstract/concrete and human/machine are meant to help imagine the kinds of activities that belong in each area</strong>, through their connotations when combined to form the four bigrams — concrete human, abstract human, concrete machine, and abstract machine. For example, the area of value as the realm of the “concrete human” (or perhaps “concrete humanity”) is meant to connote what the Spanish philosopher Unamuno called the world of “flesh and bone” within which we live and die, that is, where things matter. On the other hand, analytics as the realm of the “abstract machine” is meant to connote the platonic world of mathematical reasoning which, since Euclid, has been characterized by rigorous, abstract, deductive reasoning that has literally been described as an abstract machine (see Alan Turing).\n\n<strong>At the center of this model and each area is people</strong>. Even in the area classified as “abstract machine,” people and human thinking is at the center.\n\n”,
+“supporting”: [
+“intro_files\figure-html”
+],
+“filters”: [],
+“includes”: {}
+}
+}</p>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Welcome to your Jupyter Book</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Design/Design.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Design</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
